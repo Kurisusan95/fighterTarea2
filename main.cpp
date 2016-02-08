@@ -40,34 +40,38 @@ int main( int argc, char* args[] )
     rect_background.w = 500;
     rect_background.h = 250;
 
-    character = IMG_LoadTexture(renderer, "personaje.png");
-    rect_character.x = 0;
-    rect_character.y = 100;
-    rect_character.w = 32;
-    rect_character.h = 32;
-
     vector<Sprite*>sprites;
-    sprites.push_back(new Sprite(renderer,"assets/idle/1.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/idle/2.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/idle/3.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/idle/4.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/kick/1.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/kick/2.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/kick/3.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/kick/4.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/kick/5.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/kick/6.png",75));
+    sprites.push_back(new Sprite(renderer,"assets/idle/1.png",75,0));
+    sprites.push_back(new Sprite(renderer,"assets/idle/2.png",75,0));
+    sprites.push_back(new Sprite(renderer,"assets/idle/3.png",75,0));
+    sprites.push_back(new Sprite(renderer,"assets/idle/4.png",75,0));
 
-    sprites.push_back(new Sprite(renderer,"assets/punch/1.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/punch/2.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/punch/3.png",75));
+    vector<Sprite*>sprites1;
+    sprites1.push_back(new Sprite(renderer,"assets/kick/1.png",75,150));
+    sprites1.push_back(new Sprite(renderer,"assets/kick/2.png",75,150));
+    sprites1.push_back(new Sprite(renderer,"assets/kick/3.png",75,150));
+    sprites1.push_back(new Sprite(renderer,"assets/kick/4.png",75,150));
+    sprites1.push_back(new Sprite(renderer,"assets/kick/5.png",75,150));
+    sprites1.push_back(new Sprite(renderer,"assets/kick/6.png",75,150));
 
-    sprites.push_back(new Sprite(renderer,"assets/walk/1.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/walk/2.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/walk/3.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/walk/4.png",75));
-    sprites.push_back(new Sprite(renderer,"assets/walk/5.png",75));
+    vector<Sprite*>sprites2;
+    sprites2.push_back(new Sprite(renderer,"assets/punch/1.png",75,400));
+    sprites2.push_back(new Sprite(renderer,"assets/punch/2.png",75,400));
+    sprites2.push_back(new Sprite(renderer,"assets/punch/3.png",75,400));
+
+    vector<Sprite*>sprites3;
+    sprites3.push_back(new Sprite(renderer,"assets/walk/1.png",75,700));
+    sprites3.push_back(new Sprite(renderer,"assets/walk/2.png",75,700));
+    sprites3.push_back(new Sprite(renderer,"assets/walk/3.png",75,700));
+    sprites3.push_back(new Sprite(renderer,"assets/walk/4.png",75,700));
+    sprites3.push_back(new Sprite(renderer,"assets/walk/5.png",75,700));
+
+
+
     Move move(renderer,sprites);
+    Move move1(renderer,sprites1);
+    Move move2(renderer,sprites2);
+    Move move3(renderer,sprites3);
 
     //Main Loop
     while(true)
@@ -92,9 +96,11 @@ int main( int argc, char* args[] )
 
 
         SDL_RenderCopy(renderer, background, NULL, &rect_background);
-        SDL_RenderCopy(renderer, character, NULL, &rect_character);
 
-        move.draw();
+         move.draw();
+         move1.draw();
+         move2.draw();
+         move3.draw();
 
         SDL_RenderPresent(renderer);
     }

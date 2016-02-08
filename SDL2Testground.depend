@@ -640,3 +640,42 @@
 1454687942 source:c:\users\kurisu\desktop\fighterdragon\sprite.cpp
 	"Sprite.h"
 
+1454687942 source:c:\users\kurisu\desktop\fighterdragontarea2\character.cpp
+	"Character.h"
+
+1454687942 c:\users\kurisu\desktop\fighterdragontarea2\character.h
+	<iostream>
+	<map>
+	"Move.h"
+
+1454688069 c:\users\kurisu\desktop\fighterdragontarea2\move.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<vector>
+	"Sprite.h"
+
+1454939662 c:\users\kurisu\desktop\fighterdragontarea2\sprite.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<vector>
+	"Hitbox.h"
+
+1454687942 c:\users\kurisu\desktop\fighterdragontarea2\hitbox.h
+
+1454687942 source:c:\users\kurisu\desktop\fighterdragontarea2\hitbox.cpp
+	"Hitbox.h"
+
+1454939138 source:c:\users\kurisu\desktop\fighterdragontarea2\main.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	"Move.h"
+
+1454687942 source:c:\users\kurisu\desktop\fighterdragontarea2\move.cpp
+	"Move.h"
+
+1454937869 source:c:\users\kurisu\desktop\fighterdragontarea2\sprite.cpp
+	"Sprite.h"
+

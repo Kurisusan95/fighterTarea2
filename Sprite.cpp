@@ -1,6 +1,6 @@
 #include "Sprite.h"
 
-Sprite::Sprite(SDL_Renderer* renderer, string path, int frames)
+Sprite::Sprite(SDL_Renderer* renderer, string path, int frames, int pos)
 {
     this->renderer = renderer;
     texture = IMG_LoadTexture(renderer,path.c_str());
@@ -8,7 +8,7 @@ Sprite::Sprite(SDL_Renderer* renderer, string path, int frames)
     SDL_QueryTexture(texture,NULL,NULL,&w,&h);
     rect.w=w;
     rect.h=h;
-    rect.x=0;
+    rect.x=pos;
     rect.y=0;
     this->frames = frames;
 }

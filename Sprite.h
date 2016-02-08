@@ -13,11 +13,12 @@ class Sprite
 {
     public:
         int frames;
+        int pos;
         vector<Hitbox*>hitboxes;
         SDL_Texture *texture;
         SDL_Rect rect;
         SDL_Renderer* renderer;
-        Sprite(SDL_Renderer* renderer,string path,int frames);
+        Sprite(SDL_Renderer* renderer,string path,int frames, int pos);
         virtual ~Sprite();
         void draw();
     protected:
